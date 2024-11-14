@@ -1,0 +1,29 @@
+@startuml Inheritance
+title Vehicle
+
+class vehicle{
+    #manufacturer : string
+    #year : int
+    #color : string
+    +start()
+    +stop()
+    +drive()   
+}
+
+class car extends vehicle{
+    +opensunroof()
+}
+class truck extends vehicle{
+    +transport()    
+}
+class bus extends vehicle{
+    +scheduling()
+}
+class schoolBus extends bus{
+    +getFare()  
+}
+
+hide empty members
+
+
+@enduml

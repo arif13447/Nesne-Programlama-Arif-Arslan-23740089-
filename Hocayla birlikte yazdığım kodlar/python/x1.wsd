@@ -1,0 +1,29 @@
+@startuml class Diagram
+title product model
+class product{
+    -name:string
+    -price:float
+    -quantity:int
+    --
+    +getName():string
+    +getPrice():float
+    +getQuantity():int
+    --
+    +setName(value:string)
+    +setPrice(value:float)
+    +setQuantity(value:int)
+    --
+    +product(name:string,price:float,quantity:int)
+    --
+    +getTotalPrice():float
+}
+
+class object {
+    toString():string
+}
+
+product -up-|> object : "<<extends>>"
+
+hide empty members
+
+@enduml
